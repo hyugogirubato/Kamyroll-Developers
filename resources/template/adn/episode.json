@@ -1,0 +1,182 @@
+{
+  "__links__": {
+    "episode/season": {
+      "href": "/video/show/335/?offset=0&limit=-1&order=asc"
+    },
+    "episode/series": {
+      "href": "/show/335/?withMicrodata=true&withSeo=true"
+    },
+    "series/seasons": {
+      "href": null
+    }
+  },
+  "channel_id": "adn",
+  "type": "episode",
+  "images": {
+    "thumbnail": [
+      {
+        "width": 320,
+        "height": 180,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_320x180.jpg"
+      },
+      {
+        "width": 600,
+        "height": 338,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_600x338.jpg"
+      },
+      {
+        "width": 640,
+        "height": 360,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_640x360.jpg"
+      },
+      {
+        "width": 800,
+        "height": 450,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_800x450.jpg"
+      },
+      {
+        "width": 1200,
+        "height": 675,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_1200x675.jpg"
+      },
+      {
+        "width": 1440,
+        "height": 810,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_1440x810.jpg"
+      },
+      {
+        "width": 1600,
+        "height": 900,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_1600x900.jpg"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "type": "thumbnail",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/eps1_1920x1080.jpg"
+      }
+    ],
+    "poster_tall": [
+      {
+        "width": 60,
+        "height": 86,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_60x86.jpg"
+      },
+      {
+        "width": 120,
+        "height": 171,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_120x171.jpg"
+      },
+      {
+        "width": 240,
+        "height": 343,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_240x343.jpg"
+      },
+      {
+        "width": 480,
+        "height": 686,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_480x686.jpg"
+      },
+      {
+        "width": 750,
+        "height": 1071,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_750x1071.jpg"
+      },
+      {
+        "width": 960,
+        "height": 1371,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_960x1371.jpg"
+      },
+      {
+        "width": 1125,
+        "height": 1607,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_1125x1607.jpg"
+      },
+      {
+        "width": 1200,
+        "height": 1714,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_1200x1714.jpg"
+      },
+      {
+        "width": 1560,
+        "height": 2229,
+        "type": "poster_tall",
+        "source": "https://image.animedigitalnetwork.fr/license/bleach/tv/web/affiche_1560x2229.jpg"
+      }
+    ],
+    "poster_wide": []
+  },
+  "series_metadata": {
+    "id": "335",
+    "title": "Bleach",
+    "description": "Adolescent de quinze ans, Ichigo Kurosaki possède un don particulier : celui de voir les esprits. Un jour, il croise la route d'une belle Shinigami (un être spirituel) en train de pourchasser une \"âme perdue\", un esprit maléfique qui hante notre monde et n'arrive pas à trouver le repos. Mise en difficulté par son ennemi, la jeune fille décide alors de prêter une partie de ses pouvoirs à Ichigo, mais ce dernier hérite finalement de toute la puissance du Shinigami. Contraint d'assumer son nouveau statut, Ichigo va devoir gérer ses deux vies : celle de lycéen ordinaire, et celle de chasseur de démons…",
+    "maturity_ratings": "TV-12",
+    "episode_count": 366,
+    "season_count": 16,
+    "content_provider": "© Tite Kubo / Shueisha, TV TOKYO, dentsu, Pierrot",
+    "is_simulcast": false
+  },
+  "episode_metadata": {
+    "id": "5532",
+    "season_id": null,
+    "season_title": "Arc 01 : The Substitute",
+    "season_number": 1,
+    "episode": "1",
+    "episode_number": 1,
+    "title": "Épisode 1",
+    "description": "Ichigo Kurosaki, 15 ans, est un lycéen qui possède la mystérieuse faculté de voir les fantômes. Mais, lorsqu'il rencontre Rukia Kuchiki, une Shinigami de la Soul Society qui aide les âmes perdues à trouver la paix, sa vie déjà peu banale devient encore plus étrange. Dans le but de sauver sa famille de la mainmise d'un Hollow, un esprit maléfique qui fait des humains ses victimes, Rukia prête une partie de ses pouvoirs à Ichigo. A sa grande surprise, il en absorbe la majeure partie et en contrepartie devient lui aussi un Shinigami…",
+    "next_episode_id": "5533",
+    "hd_flag": false,
+    "is_mature": false,
+    "episode_air_date": "2014-10-14T22:00:00Z",
+    "is_subbed": true,
+    "is_dubbed": false,
+    "is_clip": false,
+    "season_tags": [
+      "Animation japonaise",
+      "Action",
+      "Fantastique",
+      "Shônen"
+    ],
+    "duration_ms": 1376000,
+    "subtitle_locales": [
+      "fr-FR"
+    ]
+  },
+  "subtitles": [
+    {
+      "locale": "fr-FR",
+      "url": "https://kamyroll-server.herokuapp.com/v1/subtitles?channel_id=adn&url=aHR0cHM6Ly9zdWJ0aXRsZTIuYW5pbWVkaWdpdGFsbmV0d29yay5mci9pVkdqNjlrX2tqNGlMQWFQK3N0aHIwSkZGSUlmRnZKeWpFZG5wUE9nbFhVa0o2VVowSTkzS25lWXZnMzNId1kwbm4rcmxZR1BfdFNfR0FWV1dSUExPX1dXbmRLRmhkTldKSzFCQm9VRENtVktXclJRNTNfUGRNZXo2cm9nYTRISSt1UlM5akhfT1JFQTBCR0JodjF5QkE9PS1BS1JFcVI3bV83VFZFMTZPaXlFNjN3PT0ubTN1OA==",
+      "format": "ass"
+    }
+  ],
+  "streams": [
+    {
+      "type": "mobile_hls",
+      "audio_locale": "jp-JP",
+      "hardsub_locale": "fr-FR",
+      "url": "https://free3b.animedigitalnetwork.fr/tv/mp4:vcA+qneJqTl0dsimhlYpFajFhV0mdKQxt9pDhsnvdJmOro5tZYJuqIITXh7JMk380TnaPg3tYVWmh2F9Nn2wS0uvr7W9_6igQ83q7vfuLfZvKZ7FE55NdMdJoKBqTgO3-0KMgnBlrqUbWWMBwCkVgFg==.mp4/playlist.m3u8?adaptive=1&ext=.mp4"
+    },
+    {
+      "type": "sd_hls",
+      "audio_locale": "jp-JP",
+      "hardsub_locale": "",
+      "url": "https://free3b.animedigitalnetwork.fr/tv/mp4:rpYqo4t71lAfXDnpaRVlSrGGToMkBwQZXYyQqdbv9_UX6AAi44K6alViI7CaX5frUG55qrC6jUTkrb3mwBgy5S3Lny0KnekIDyatozVYrwI=-btKMReuRvDgK+nsW0cs26A==.mp4/playlist.m3u8?adaptive=1&ext=.mp4"
+    }
+  ]
+}
