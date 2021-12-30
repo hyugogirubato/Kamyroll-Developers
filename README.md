@@ -139,12 +139,35 @@ View server statistics.
 The region code is the value to use with the country bypass to define the region used to find the content if it is not available. It is generally not necessary to use the country bypass because the server is located in an area where the service catalogues are the most complete.
 
 ## Use
-
 | Site         | URL                                                                    | Parameter
 | :----------- | :--------------------------------------------------------------------- | :------------------------------------------
 | Crunchyroll  | `/watch/G2XU03VQ5/overwhelming-strength-the-straw-hats-come-together`  | `channel_id=crunchyroll&media_id=G2XU03VQ5`
 | Funimation   | `/v/one-piece/overwhelming-strength-the-straw-hats-come-together`      | `channel_id=funimation&slug_show=one-piece&slug_episode=overwhelming-strength-the-straw-hats-come-together`
 | ADN          | `/video/one-piece/17889-episode-1000-puissance-hors-du-commun-l-equipage-du-chapeau-de-paille-au-complet`  | `channel_id=adn&media_id=17889`
+
+
+## Availablity
+| Channel ID          | Streams type        | Subtitles locale    | Subtitles format
+| :------------------ | :------------------ | :------------------ | :------------------
+| `crunchyroll`       | `adaptive_hls`      | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`  | `ass`
+| `funimation`        | `simulcast_adaptive_hls`, `simulcast_mobile_mp4`, `uncut_adaptive_hls`, `uncut_mobile_mp4`  | `en-US` `pt-BR`, `es-419`, `zh-CN`  | `vtt`, `srt`, `dfxp`
+| `adn`               | `mobile_hls`, `sd_hls`, `hd_hls`, `fhd_hls`, `adaptive_hls`  | `fr-FR`  | `ass`
+
+## Language code
+| Code      | Language               |
+| :-------- | :--------------------- |
+| `ar-SA`   | Arabic                 |
+| `de-DE`   | German                 |
+| `en-US`   | English (USA)          |
+| `es-419`  | Spanish                |
+| `es-ES`   | Spanish (Spain)        |
+| `fr-FR`   | French (France)        |
+| `it-IT`   | Italian                |
+| `pt-BR`   | Portuguese (Brazil)    |
+| `pt-PT`   | Portuguese (Portugal)  |
+| `ru-RU`   | Russian                |
+| `zh-CN`   | Chinese                |
+| ``        | Off                    |
 
 ---
 *This script was created by the __Nashi Team__.  
