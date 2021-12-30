@@ -167,7 +167,7 @@ The region code is the value to use with the country bypass to define the region
 | `pt-PT`   | Portuguese (Portugal)  |
 | `ru-RU`   | Russian                |
 | `zh-CN`   | Chinese                |
-| `jp-JP`   | Japanese               |
+| `ja-JP`   | Japanese               |
 | ``        | Off                    |
 
 ---
