@@ -149,7 +149,7 @@ The region code is the value to use with the country bypass to define the region
 ## Availablity
 | Channel ID          | Streams type        | Subtitles locale    | Subtitles format
 | :------------------ | :------------------ | :------------------ | :------------------
-| `crunchyroll`       | `adaptive_hls`      | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`  | `ass`
+| `crunchyroll`       | `adaptive_hls`      | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`  | `ass`
 | `funimation`        | `simulcast_adaptive_hls`, `simulcast_mobile_mp4`, `uncut_adaptive_hls`, `uncut_mobile_mp4`  | `en-US` `pt-BR`, `es-419`, `zh-CN`  | `vtt`, `srt`, `dfxp`
 | `adn`               | `mobile_hls`, `sd_hls`, `hd_hls`, `fhd_hls`, `adaptive_hls`  | `fr-FR`  | `ass`
 
@@ -167,6 +167,7 @@ The region code is the value to use with the country bypass to define the region
 | `pt-PT`   | Portuguese (Portugal)  |
 | `ru-RU`   | Russian                |
 | `zh-CN`   | Chinese                |
+| `tr-TR`   | Turkish                |
 | `ja-JP`   | Japanese               |
 | ``        | Off                    |
 
