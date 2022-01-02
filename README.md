@@ -93,7 +93,7 @@ View server statistics.
 ## Services availability
 | Code  | Country             | Crunchyroll         | Funimation          | ADN                 |
 | :---- | :------------------ | :------------------ | :------------------ | :------------------ |
-| `at`  | Argentina           | :?:                 | :x:                 | :?:                 |
+| `ar`  | Argentina           | :?:                 | :x:                 | :?:                 |
 | `at`  | Austria             | :?:                 | :x:                 | :?:                 |
 | `au`  | Australia           | :?:                 | :white_check_mark:  | :?:                 |
 | `be`  | Belgium             | :?:                 | :x:                 | :?:                 |
