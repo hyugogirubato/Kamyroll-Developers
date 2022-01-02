@@ -157,7 +157,7 @@ The region code is the value to use with the country bypass to define the region
 ## Language code
 | Code      | Language               |
 | :-------- | :--------------------- |
-| `ar-SA`   | Arabic                 |
+| `ar-SA`   | Arabic (Saudi Arabia)  |
 | `de-DE`   | German                 |
 | `en-US`   | English (USA)          |
 | `es-419`  | Spanish                |
@@ -169,7 +169,7 @@ The region code is the value to use with the country bypass to define the region
 | `ru-RU`   | Russian                |
 | `zh-CN`   | Chinese                |
 | `tr-TR`   | Turkish                |
-| `ar-ME`   | Montenegro             |
+| `ar-ME`   | Arabic (Montenegro)    |
 | `ja-JP`   | Japanese               |
 | ``        | Off                    |
 
