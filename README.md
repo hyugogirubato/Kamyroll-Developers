@@ -1,5 +1,5 @@
 ![Kamyroll-Developers](/resources/kamyroll_developers.png?raw=true)  
-[![Version](https://img.shields.io/badge/Version-v2022.01.04-green.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v2022.01.05-green.svg)](https://shields.io/)
 ## Description
 Server synthesizing requests to compatible sites by providing a response in unified JSON format and offering complete information for each available media.
 
@@ -150,7 +150,7 @@ The region code is the value to use with the country bypass to define the region
 ## Availablity
 | Channel ID          | Streams type        | Subtitles locale    | Subtitles format
 | :------------------ | :------------------ | :------------------ | :------------------
-| `crunchyroll`       | `adaptive_hls`      | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`, `ar-ME`  | `ass`
+| `crunchyroll`       | `vo_adaptive_hls`   | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`, `ar-ME`  | `ass`
 | `funimation`        | `simulcast_adaptive_hls`, `simulcast_mobile_mp4`, `uncut_adaptive_hls`, `uncut_mobile_mp4`  | `en-US` `pt-BR`, `es-419`, `zh-CN`  | `vtt`, `srt`, `dfxp`
 | `adn`               | `mobile_hls`, `sd_hls`, `hd_hls`, `fhd_hls`, `adaptive_hls`  | `fr-FR`  | `ass`
 
