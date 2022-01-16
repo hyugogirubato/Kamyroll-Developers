@@ -1,160 +1,345 @@
 ![Kamyroll-Developers](/resources/kamyroll_developers.png?raw=true)  
-[![Version](https://img.shields.io/badge/Version-v2022.01.09-green.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v2022.01.16-green.svg)](https://shields.io/)
 ## Description
 Server synthesizing requests to compatible sites by providing a response in unified JSON format and offering complete information for each available media.
 
-## Supported sites
-| Site         | URL                             |
-| :----------- | :------------------------------ |
-| Crunchyroll  | https://beta.crunchyroll.com    |
-| Funimation   | https://www.funimation.com      |
-| ADN          | https://animedigitalnetwork.fr  |
-
-
-## API Reference
-### API address
+## API address
 | Protocol        | Method         | URL                                    |
 | :-------------- | :------------- | :------------------------------------- |
 | HTTPS           | GET            | https://kamyroll-server.herokuapp.com  |
 
-#### Description
-Address of the API, it is this one that is used for all available endpoints.
+## Supported sites
+<details><summary>ADN</summary>
 
+Website: https://animedigitalnetwork.fr
 
-### Get media information
-
+## Parent
 ```https
-  GET /v1/media
+  GET /v1/parent
 ```
+| Parameter     | Type       | Description                      |
+| :------------ | :--------- | :------------------------------- |
+| `channel_id`  | `string`   | **Required**. Service name       |
+| `slug_title`  | `string`   | **Required**. Parent slug title  |
+| `country`     | `string`   | **Required**. Region location    |
 
-| Parameter       | Type       | Description                 |
-| :-------------- | :--------- | :-------------------------- |
-| `channel_id`    | `string`   | **Required**. Service name  |
-| `media_id`      | `string`   | Media ID                    |
-| `slug_show`     | `string`   | Show ID                     |
-| `slug_episode`  | `string`   | Media ID                    |
-| `email`         | `string`   | Account ID                  |
-| `password`      | `string`   | Account password            |
-| `bypass`        | `boolean`  | Premium bypass              |
-| `country`       | `string`   | Country bypass              |
-
-#### Description
-Returns all information related to the defined media. The media statement according to the platforms changes. If the bypass is not available or you do not want to use it but still have been to premium videos, you can use your premium account by filling in the information. If some media are not available in your area to get the video streams, used the country bypass.
-
-#### Use of parameters
-| Channel ID     | Type        | Parameter                    |
-| :------------- | :---------- | :--------------------------- |
-| `crunchyroll`  | Episode     | `media_id`                   |
-| `crunchyroll`  | Movie       | `media_id`                   |
-| `funimation`   | Episode     | `slug_show`, `slug_episode`  |
-| `adn`          | Episode     | `media_id`                   |
-| `adn`          | Movie       | `media_id`                   |
-
-
-### Get subtitles
-
+## Streams
 ```https
-  GET /v1/subtitles
+  GET /v1/streams
 ```
+| Parameter     | Type       | Description                    |
+| :------------ | :--------- | :----------------------------- |
+| `channel_id`  | `string`   | **Required**. Service name     |
+| `id`          | `string`   | **Required**. Episode ID       |
+| `country`     | `string`   | **Required**. Region location  |
 
-| Parameter     | Type      | Description                 |
-| :------------ | :-------- | :-------------------------- |
-| `channel_id`  | `string`  | **Required**. Service name  |
-| `url`         | `string`  | **Required**. Source URL    |
+## Supported type
+| Type          | Parent              | Streams             |
+| :------------ | :------------------ | :------------------ |
+| Series        | :white_check_mark:  | :x:                 |
+| Episode       | :x:                 | :white_check_mark:  |
+| OAV           | :white_check_mark:  | :white_check_mark:  |
+| Feature film  | :white_check_mark:  | :white_check_mark:  |
+| Short film    | :white_check_mark:  | :white_check_mark:  |
 
-#### Description
-For some streaming services such as ADN, subtitles are encrypted and/or not available in a conventional format. This request therefore allows subtitles in a style-compatible format.
+## Use
+| URL           | `/video/one-piece/17889-episode-1000-puissance-hors-du-commun-l-equipage-du-chapeau-de-paille-au-complet`  |
+| :------------ | :--------------------------------------------------------------------------------------------------------- |
+| `channel_id`  | `adn`                                                                                                      |
+| `slug_title`  | `one-piece`                                                                                                |
+| `id`          | `17889`                                                                                                    |
+| `country`     | `fr`                                                                                                       |
 
+## Availablity
+| Type              | Availablity                  |
+| :---------------- | :--------------------------- |
+| Streams type      | `adaptive_hls`               |
+| Subtitles locale  | `fr-FR`                      |
+| Subtitles format  | `ass`                        |
+| Resolutions       | `360`, `480`, `720`, `1080`  |
 
-### Get server information
+</details>
+
+<details><summary>Crunchyroll</summary>
+
+Website: https://beta.crunchyroll.com
+
+## Parent
+```https
+  GET /v1/parent
+```
+| Parameter     | Type       | Description                 |
+| :------------ | :--------- | :-------------------------- |
+| `channel_id`  | `string`   | **Required**. Service name  |
+| `id`          | `string`   | **Required**. Parent ID     |
+| `locale`      | `string`   | Language code               |
+
+## Streams
+```https
+  GET /v1/streams
+```
+| Parameter     | Type       | Description                 |
+| :------------ | :--------- | :-------------------------- |
+| `channel_id`  | `string`   | **Required**. Service name  |
+| `id`          | `string`   | **Required**. Episode ID    |
+| `locale`      | `string`   | Language code               |
+
+## Supported type
+| Type           | Parent              | Streams             |
+| :------------- | :------------------ | :------------------ |
+| Series         | :white_check_mark:  | :x:                 |
+| Episode        | :x:                 | :white_check_mark:  |
+| Movie listing  | :white_check_mark:  | :x:                 |
+| Movie          | :x:                 | :white_check_mark:  |
+
+## Use
+| URL           | `/watch/G2XU03VQ5/overwhelming-strength-the-straw-hats-come-together`  |
+| :------------ | :--------------------------------------------------------------------- |
+| `channel_id`  | `crunchyroll`                                                          |
+| `id`          | `G2XU03VQ5`                                                            |
+
+## Availablity
+| Type              | Availablity                                                                                                  |
+| :---------------- | :----------------------------------------------------------------------------------------------------------- |
+| Streams type      | `adaptive_hls`                                                                                               |
+| Subtitles locale  | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`, `ar-ME`  |
+| Subtitles format  | `ass`                                                                                                        |
+| Resolutions       | `80`, `240`, `360`, `480`, `720`, `1080`                                                                     |
+
+</details>
+
+<details><summary>Funimation</summary>
+
+website:  https://www.funimation.com
+
+## Parent
+```https
+  GET /v1/parent
+```
+| Parameter     | Type       | Description                      |
+| :------------ | :--------- | :------------------------------- |
+| `channel_id`  | `string`   | **Required**. Service name       |
+| `slug_title`  | `string`   | **Required**. Parent slug title  |
+
+## Streams
+```https
+  GET /v1/streams
+```
+| Parameter       | Type       | Description                      |
+| :-------------- | :--------- | :------------------------------- |
+| `channel_id`    | `string`   | **Required**. Service name       |
+| `slug_title`    | `string`   | **Required**. Parent slug title  |
+| `slug_episode`  | `string`   | **Required**. Slug episode       |
+
+## Supported type
+| Type           | Parent              | Streams             |
+| :------------- | :------------------ | :------------------ |
+| Series         | :white_check_mark:  | :x:                 |
+| Episode        | :white_check_mark:  | :white_check_mark:  |
+| Trailer        | :white_check_mark:  | :white_check_mark:  |
+| Movie          | :white_check_mark:  | :white_check_mark:  |
+
+## Use
+| URL             | `/v/fairy-tail/natsu-vs-yuka-the-wave-user`  |
+| :-------------- | :------------------------------------------- |
+| `channel_id`    | `funimation`                                 |
+| `slug_title`    | `fairy-tail`                                 |
+| `slug_episode`  | `natsu-vs-yuka-the-wave-user`                |
+
+## Availablity
+| Type              | Availablity                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------ |
+| Streams type      | `simulcast_adaptive_hls`, `simulcast_mobile_mp4`, `uncut_adaptive_hls`, `uncut_mobile_mp4`  |
+| Subtitles locale  | `en-US` `pt-BR`, `es-419`, `zh-CN`                                                          |
+| Subtitles format  | `ass`                                                                                       |
+| Resolutions       | `234`, `360`, `432`, `540`, `720`, `1080`                                                   |
+
+</details>
+
+## Additional options
+<details><summary>Login</summary>
+
+Allows you to log in to use your subscription to unlock content.
+
+| Parameter   | Type       | Description  |
+| :---------- | :--------- | :----------- |
+| `email`     | `string`   | Email        |
+| `password`  | `string`   | Password     |
+
+## Supported sites
+| Type         | Supported           |
+| :----------- | :------------------ |
+| ADN          | :white_check_mark:  |
+| Crunchyroll  | :white_check_mark:  |
+| Funimation   | :white_check_mark:  |
+
+</details>
+
+<details><summary>Bypass</summary>
+
+Allows you to get premium content without needing a subscription.
+
+| Parameter   | Type       | Description  |
+| :---------- | :--------- | :----------- |
+| `bypass`    | `boolean`  | Activate     |
+
+## Supported sites
+| Type         | Supported           |
+| :----------- | :------------------ |
+| ADN          | :white_check_mark:  |
+| Crunchyroll  | :white_check_mark:  |
+| Funimation   | :white_check_mark:  |
+
+</details>
+
+<details><summary>Country</summary>
+
+Allows you to load a catalog from a specific region.
+
+| Parameter   | Type       | Description      |
+| :---------- | :--------- | :--------------- |
+| `country`    | `string`  | Region location  |
+
+## Supported sites
+| Type         | Supported           |
+| :----------- | :------------------ |
+| ADN          | :white_check_mark:  |
+| Crunchyroll  | :white_check_mark:  |
+| Funimation   | :white_check_mark:  |
+
+## Supported countries
+| Code  | Language            |
+| :---- | :------------------ |
+| `ar`  | Argentina           |
+| `at`  | Austria             |
+| `au`  | Australia           |
+| `be`  | Belgium             |
+| `bg`  | Bulgaria            |
+| `br`  | Brazil              |
+| `ca`  | Canada              |
+| `ch`  | Switzerland         |
+| `cl`  | Chile               |
+| `co`  | Colombia            |
+| `cz`  | Czech Republic      |
+| `de`  | Germany             |
+| `dk`  | Denmark             |
+| `es`  | Spain               |
+| `fi`  | Finland             |
+| `fr`  | France              |
+| `gb`  | United Kingdom      |
+| `gr`  | Greece              |
+| `hk`  | Hong Kong           |
+| `hr`  | Croatia             |
+| `hu`  | Hungary             |
+| `id`  | Indonesia           |
+| `ie`  | Ireland             |
+| `il`  | Israel              |
+| `in`  | India               |
+| `is`  | Iceland             |
+| `it`  | Italy               |
+| `jp`  | Japan               |
+| `kr`  | Korea               |
+| `mx`  | Mexico              |
+| `nl`  | Netherlands         |
+| `no`  | Norway              |
+| `nz`  | New Zealand         |
+| `pl`  | Poland              |
+| `ro`  | Romania             |
+| `ru`  | Russian Federation  |
+| `se`  | Sweden              |
+| `sg`  | Singapore           |
+| `sk`  | Slovakia            |
+| `tr`  | Turkey              |
+| `uk`  | United Kingdom      |
+| `us`  | USA                 |
+
+</details>
+
+<details><summary>API error</summary>
+
+Form of an api error.
+
+````json
+{"error": true, "code": "bad_auth_params", "message": "Unauthenticated request."}
+````
+## Errors list
+| Code                        | Message                                                          |
+| :-------------------------- | :--------------------------------------------------------------- |
+| `bad_identifiers`           | `The identification information is invalid.`                     |
+| `bad_bypass`                | `Bypass service is unavailable.`                                 |
+| `bad_service`               | `The service is unavailable.`                                    |
+| `bad_bypass_declaration`    | `Bypass declaration error.`                                      |
+| `bad_password_entry`        | `Password is not defined.`                                       |
+| `bad_email_entry`           | `Email is not defined.`                                          |
+| `bad_bypass_definition`     | `The bypass cannot be activated with the use of an identifier.`  |
+| `bad_country`               | `Country is not available or does not exist.`                    |
+| `bad_initialize`            | `Service initialization error.`                                  |
+| `bad_service_country`       | `The service is not available in this country.`                  |
+| `bad_locale`                | `This locale does not exist.`                                    |
+| `unknown_id`                | `Id was not recognized.`                                         |
+| `missing_id`                | `Id is undefined.`                                               |
+| `unknown_type`              | `The type is not recognized.`                                    |
+| `bad_id_type`               | `The defined id is not compatible.`                              |
+| `premium_only`              | `Video requires premium access.`                                 |
+| `bad_playback`              | `An error occurred while loading the playbacks.`                 |
+| `bad_href`                  | `Unable to load href.`                                           |
+| `bad_show_id`               | `Unable to load show id.`                                        |
+| `bad_slug_title`            | `Unable to load slug title.`                                     |
+| `bad_episode_extract`       | `Error extracting episode.`                                      |
+| `bad_movie_extract`         | `Error extracting movie.`                                        |
+| `bad_series_extract`        | `Error extracting series.`                                       |
+| `missing_channel_id`        | `Channel id is undefined.`                                       |
+| `missing_slug_title`        | `Slug title is undefined.`                                       |
+| `missing_slug_episode`      | `Slug episode is undefined.`                                     |
+| `unknown_channel_id`        | `Channel id was not recognized.`                                 |
+| `unknown_extractor`         | `Unable to set extractor.`                                       |
+| `bad_player_initialize`     | `A player initialization error has occurred.`                    |
+| `bad_player_connection`     | `Unable to connect to the player. Try again.`                    |
+| `unknown_error`             | `An unknown error has occurred.`                                 |
+| `bad_videos`                | `Unable to find the video associated with the id.`               |
+| `missing_json`              | `Json is undefined.`                                             |
+| `bad_json`                  | `Json data is invalid.`                                          |
+| `unsupported_channel`       | `The channel is not supported.`                                  |
+| `bad_subtitles`             | `An error occurred while creating the subtitles.`                |
+| `bad_auth_params`           | `Unauthenticated request.`                                       |
+| `mature_content`            | `You need to enable mature content.`                             |
+| `bad_proxy_initialization`  | `An error occurred while creating the proxy.`                    |
+| `bad_proxy_identification`  | `An error occurred during proxy authentication.`                 |
+| `bad_ip_loading`            | `An error occurred while loading the IP.`                        |
+| `missing_token`             | `Token is undefined.`                                            |
+| `bad_token`                 | `The access token is invalid.`                                   |
+| `bad_reset`                 | `An error occurred while resetting.`                             |
+
+</details>
+
+<details><summary>Management</summary>
+
+## IP
+
+Displays server information.
 
 ```https
   GET /ip
 ```
 
-#### Description
-Display some information about the server such as its IP address or location.
+## Stats
 
-
-### Get subtitles
+Shows how often the server is used.
 
 ```https
   GET /stats
 ```
-
 | Parameter  | Type       | Description                 |
 | :--------- | :--------- | :-------------------------- |
 | `token`    | `string`   | **Required**. Access token  |
-| `reset`    | `boolean`  | Reset the stats             |
+| `reset`    | `boolean`  | Reset                       |
 
-#### Description
-View server statistics.
-
-## Services availability
-| Code  | Country             | Crunchyroll         | Funimation          | ADN                 |
-| :---- | :------------------ | :------------------ | :------------------ | :------------------ |
-| `ar`  | Argentina           | :?:                 | :x:                 | :?:                 |
-| `at`  | Austria             | :?:                 | :x:                 | :?:                 |
-| `au`  | Australia           | :?:                 | :white_check_mark:  | :?:                 |
-| `be`  | Belgium             | :?:                 | :x:                 | :?:                 |
-| `bg`  | Bulgaria            | :?:                 | :x:                 | :?:                 |
-| `br`  | Brazil              | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `ca`  | Canada              | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `ch`  | Switzerland         | :?:                 | :x:                 | :?:                 |
-| `cl`  | Chile               | :?:                 | :x:                 | :?:                 |
-| `co`  | Colombia            | :?:                 | :x:                 | :?:                 |
-| `cz`  | Czech Republic      | :?:                 | :x:                 | :?:                 |
-| `de`  | Germany             | :x:                 | :x:                 | :?:                 |
-| `dk`  | Denmark             | :?:                 | :x:                 | :?:                 |
-| `es`  | Spain               | :white_check_mark:  | :x:                 | :?:                 |
-| `fi`  | Finland             | :?:                 | :x:                 | :?:                 |
-| `fr`  | France              | :white_check_mark:  | :x:                 | :white_check_mark:  |
-| `gb`  | United Kingdom      | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `gr`  | Greece              | :white_check_mark:  | :x:                 | :?:                 |
-| `hk`  | Hong Kong           | :?:                 | :x:                 | :?:                 |
-| `hr`  | Croatia             | :?:                 | :x:                 | :?:                 |
-| `hu`  | Hungary             | :?:                 | :x:                 | :?:                 |
-| `id`  | Indonesia           | :?:                 | :x:                 | :?:                 |
-| `ie`  | Ireland             | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `il`  | Israel              | :?:                 | :x:                 | :?:                 |
-| `in`  | India               | :?:                 | :x:                 | :?:                 |
-| `is`  | Iceland             | :?:                 | :x:                 | :?:                 |
-| `it`  | Italy               | :?:                 | :x:                 | :?:                 |
-| `jp`  | Japan               | :x:                 | :x:                 | :?:                 |
-| `kr`  | Korea               | :?:                 | :x:                 | :?:                 |
-| `mx`  | Mexico              | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `nl`  | Netherlands         | :?:                 | :x:                 | :?:                 |
-| `no`  | Norway              | :?:                 | :x:                 | :?:                 |
-| `nz`  | New Zealand         | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `pl`  | Poland              | :?:                 | :x:                 | :?:                 |
-| `ro`  | Romania             | :?:                 | :x:                 | :?:                 |
-| `ru`  | Russian Federation  | :?:                 | :x:                 | :?:                 |
-| `se`  | Sweden              | :?:                 | :x:                 | :?:                 |
-| `sg`  | Singapore           | :?:                 | :x:                 | :?:                 |
-| `sk`  | Slovakia            | :?:                 | :x:                 | :?:                 |
-| `tr`  | Turkey              | :?:                 | :x:                 | :?:                 |
-| `uk`  | United Kingdom      | :white_check_mark:  | :white_check_mark:  | :?:                 |
-| `us`  | USA                 | :white_check_mark:  | :white_check_mark:  | :x:                 |
-
-#### Description
-The region code is the value to use with the country bypass to define the region used to find the content if it is not available. It is generally not necessary to use the country bypass because the server is located in an area where the service catalogues are the most complete.
-
-## Use
-| Site         | URL                                                                    | Parameter
-| :----------- | :--------------------------------------------------------------------- | :------------------------------------------
-| Crunchyroll  | `/watch/G2XU03VQ5/overwhelming-strength-the-straw-hats-come-together`  | `channel_id=crunchyroll&media_id=G2XU03VQ5`
-| Funimation   | `/v/one-piece/overwhelming-strength-the-straw-hats-come-together`      | `channel_id=funimation&slug_show=one-piece&slug_episode=overwhelming-strength-the-straw-hats-come-together`
-| ADN          | `/video/one-piece/17889-episode-1000-puissance-hors-du-commun-l-equipage-du-chapeau-de-paille-au-complet`  | `channel_id=adn&media_id=17889`
+</details>
 
 
-## Availablity
-| Channel ID          | Streams type        | Subtitles locale    | Subtitles format
-| :------------------ | :------------------ | :------------------ | :------------------
-| `crunchyroll`       | `vo_adaptive_hls`   | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`, `ar-ME`  | `ass`
-| `funimation`        | `simulcast_adaptive_hls`, `simulcast_mobile_mp4`, `uncut_adaptive_hls`, `uncut_mobile_mp4`  | `en-US` `pt-BR`, `es-419`, `zh-CN`  | `vtt`, `srt`, `dfxp`
-| `adn`               | `mobile_hls`, `sd_hls`, `hd_hls`, `fhd_hls`, `adaptive_hls`  | `fr-FR`  | `ass`
+## Informations
+<details><summary>Language code</summary>
 
-## Language code
 | Code      | Language               |
 | :-------- | :--------------------- |
 | `ar-SA`   | Arabic (Saudi Arabia)  |
@@ -172,6 +357,35 @@ The region code is the value to use with the country bypass to define the region
 | `ar-ME`   | Arabic (Montenegro)    |
 | `ja-JP`   | Japanese               |
 | ``        | Off                    |
+
+</details>
+
+<details><summary>Bypass</summary>
+
+## Working
+The bypass consists of being able to unlock access to videos reserved for paying subscribers on the various price-based services. However, this is not a bug or a fault of the sites. The bypass works using real paid accounts that allow you to generate streaming links thanks to them. This service is offered for free although it is a real cost, that's why not all platforms are supported or the bypass may be unavailable for some of them.
+
+## Identification
+The bypass is associated with accounts internal to the script, it does not use credentials data from other API users. Bypass credentials are not disclosed in any way and may be removed at the donor's request if desired.
+
+</details>
+
+<details><summary>Personal data</summary>
+
+All the information sent used with the API, whether it is the services used, identification information or even the targeted media are not saved.
+
+</details>
+
+<details><summary>Support</summary>
+
+If you like the service, you have several possibilities to help us by contacting us on our discord server.
+To support us, you can:
+- Donate money to ensure bypass longevity and developer support
+- Share your premium account credentials for use as a bypass
+- Talk about us to developers or communities
+
+</details>
+
 
 ---
 *This script was created by the __Nashi Team__.  
