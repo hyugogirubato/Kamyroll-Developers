@@ -1,5 +1,5 @@
 ![Kamyroll-Developers](/resources/kamyroll_developers.png?raw=true)  
-[![Version](https://img.shields.io/badge/Version-v2022.01.16-green.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v2022.01.31-green.svg)](https://shields.io/)
 ## Description
 Server synthesizing requests to compatible sites by providing a response in unified JSON format and offering complete information for each available media.
 
@@ -309,6 +309,7 @@ Form of an api error.
 | `missing_token`             | `Token is undefined.`                                            |
 | `bad_token`                 | `The access token is invalid.`                                   |
 | `bad_reset`                 | `An error occurred while resetting.`                             |
+| `drm_restrictions`          | `The video is blocked by a DRM.`                                 |
 
 </details>
 
