@@ -323,6 +323,14 @@ Displays server information.
   GET /ip
 ```
 
+## Config
+
+Display the current server status with the list of available services.
+
+```https
+  GET /v2/config
+```
+
 ## Stats
 
 Shows how often the server is used.
