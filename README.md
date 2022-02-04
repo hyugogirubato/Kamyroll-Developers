@@ -1,5 +1,5 @@
 ![Kamyroll-Developers](/resources/kamyroll_developers.png?raw=true)  
-[![Version](https://img.shields.io/badge/Version-v2022.02.01-green.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v2022.02.04-green.svg)](https://shields.io/)
 ## Description
 Server synthesizing requests to compatible sites by providing a response in unified JSON format and offering complete information for each available media.
 
@@ -21,7 +21,6 @@ Website: https://animedigitalnetwork.fr
 | :------------ | :--------- | :------------------------------- |
 | `channel_id`  | `string`   | **Required**. Service name       |
 | `slug_title`  | `string`   | **Required**. Parent slug title  |
-| `country`     | `string`   | **Required**. Region location    |
 
 ## Streams
 ```https
@@ -31,7 +30,6 @@ Website: https://animedigitalnetwork.fr
 | :------------ | :--------- | :----------------------------- |
 | `channel_id`  | `string`   | **Required**. Service name     |
 | `id`          | `string`   | **Required**. Episode ID       |
-| `country`     | `string`   | **Required**. Region location  |
 
 ## Supported type
 | Type          | Parent              | Streams             |
@@ -48,7 +46,6 @@ Website: https://animedigitalnetwork.fr
 | `channel_id`  | `adn`                                                                                                      |
 | `slug_title`  | `one-piece`                                                                                                |
 | `id`          | `17889`                                                                                                    |
-| `country`     | `fr`                                                                                                       |
 
 ## Availablity
 | Type              | Availablity                  |
@@ -104,7 +101,7 @@ Website: https://beta.crunchyroll.com
 | Streams type      | `adaptive_hls`                                                                                               |
 | Subtitles locale  | `ar-SA`, `de-DE`, `en-US`, `es-419`, `es-ES`, `fr-FR`, `it-IT`, `pt-BR`, `pt-PT`, `ru-RU`, `tr-TR`, `ar-ME`  |
 | Subtitles format  | `ass`                                                                                                        |
-| Resolutions       | `80`, `240`, `360`, `480`, `720`, `1080`                                                                     |
+| Resolutions       | `80`, `96`, `240`, `360`, `480`, `720`, `1080`                                                                     |
 
 </details>
 
@@ -189,69 +186,6 @@ Allows you to get premium content without needing a subscription.
 | ADN          | :white_check_mark:  |
 | Crunchyroll  | :white_check_mark:  |
 | Funimation   | :white_check_mark:  |
-
-</details>
-
-<details><summary>Country</summary>
-
-Allows you to load a catalog from a specific region.
-
-| Parameter   | Type       | Description      |
-| :---------- | :--------- | :--------------- |
-| `country`    | `string`  | Region location  |
-
-## Supported sites
-| Type         | Supported           |
-| :----------- | :------------------ |
-| ADN          | :white_check_mark:  |
-| Crunchyroll  | :white_check_mark:  |
-| Funimation   | :white_check_mark:  |
-
-## Supported countries
-| Code  | Language            |
-| :---- | :------------------ |
-| `ar`  | Argentina           |
-| `at`  | Austria             |
-| `au`  | Australia           |
-| `be`  | Belgium             |
-| `bg`  | Bulgaria            |
-| `br`  | Brazil              |
-| `ca`  | Canada              |
-| `ch`  | Switzerland         |
-| `cl`  | Chile               |
-| `co`  | Colombia            |
-| `cz`  | Czech Republic      |
-| `de`  | Germany             |
-| `dk`  | Denmark             |
-| `es`  | Spain               |
-| `fi`  | Finland             |
-| `fr`  | France              |
-| `gb`  | United Kingdom      |
-| `gr`  | Greece              |
-| `hk`  | Hong Kong           |
-| `hr`  | Croatia             |
-| `hu`  | Hungary             |
-| `id`  | Indonesia           |
-| `ie`  | Ireland             |
-| `il`  | Israel              |
-| `in`  | India               |
-| `is`  | Iceland             |
-| `it`  | Italy               |
-| `jp`  | Japan               |
-| `kr`  | Korea               |
-| `mx`  | Mexico              |
-| `nl`  | Netherlands         |
-| `no`  | Norway              |
-| `nz`  | New Zealand         |
-| `pl`  | Poland              |
-| `ro`  | Romania             |
-| `ru`  | Russian Federation  |
-| `se`  | Sweden              |
-| `sg`  | Singapore           |
-| `sk`  | Slovakia            |
-| `tr`  | Turkey              |
-| `uk`  | United Kingdom      |
-| `us`  | USA                 |
 
 </details>
 
