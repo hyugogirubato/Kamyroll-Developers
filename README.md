@@ -183,7 +183,7 @@ Allows you to get premium content without needing a subscription.
 ## Supported sites
 | Type         | Supported           |
 | :----------- | :------------------ |
-| ADN          | :white_check_mark:  |
+| ADN          | :x:                 |
 | Crunchyroll  | :white_check_mark:  |
 | Funimation   | :white_check_mark:  |
 
