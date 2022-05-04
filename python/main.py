@@ -23,7 +23,7 @@ def main():
     # client.set_username('hyugogirubato')
     # client.set_audio_language('ja-JP')
     # client.set_subtitle_language('fr-FR')
-    # client.set_email(password, 'hyugogirubato@gmail.com')
+    # client.set_email(password, 'email@gmail.com')
     # client.set_password(password, 'password')
     # client.delete_account(password)
     # client.add_subscription(password, 'crunchyroll', 'cr_email', 'cr_password')
