@@ -1,7 +1,7 @@
 """
 Project: Kamyroll
 File: KamyrollClient.py
-Date: 2022.05.04
+Date: 2022.06.07
 """
 
 import json
@@ -9,11 +9,14 @@ import sys
 import pyperclip
 import requests
 
-BASE_API = 'https://api.kamyroll.tech'
+# BASE_API = 'https://api.kamyroll.tech'
+BASE_API = 'https://kamyroll.herokuapp.com'
+# BASE_API = 'https://beta-kamyroll.herokuapp.com'
+# BASE_API = 'http://localhost:8086'
 USER_AGENT = 'Kamyroll/3.17.0 Android/7.1.2 okhttp/4.9.1'
 HEADERS = {
     'user-agent': USER_AGENT,
-    'authorization': 'Basic BCoB9f4m4lSlo+fp05PjlwWcplxQXDT+N+1FfvsyoF41YSy8nH+kuJBQowYrVkiZq6PvTvjFEoQQvzJOt3pJZA=='
+    'authorization': 'Basic vrvluizpdr2eby+RjSKM17dOLacExxq1HAERdxQDO6+2pHvFHTKKnByPD7b6kZVe1dJXifb6SG5NWMz49ABgJA=='
 }
 
 """ ENDPOINTS
@@ -47,8 +50,8 @@ def _check_request(response):
 
 
 def _copy(response):
-    print(response)
-    pyperclip.copy(json.dumps(response))
+    print(json.dumps(response, indent=4, sort_keys=False, ensure_ascii=False))
+    pyperclip.copy(json.dumps(response, indent=4, sort_keys=False, ensure_ascii=False))
 
 
 class Client:
@@ -158,12 +161,14 @@ class Client:
         }
         _copy(_check_request(requests.get(f'{BASE_API}/content/v1/search', params=params, headers=self._headers)))
 
-    def seasons(self, channel_id, show_id, locale='en-US'):
+    def seasons(self, channel_id, show_id, locale='en-US', filter=None):
         params = {
             'channel_id': channel_id,
             'id': show_id,
             'locale': locale
         }
+        if not filter is None:
+            params['filter'] = filter
         _copy(_check_request(requests.get(f'{BASE_API}/content/v1/seasons', params=params, headers=self._headers)))
 
     def movies(self, channel_id, movie_id, locale='en-US'):
@@ -182,13 +187,16 @@ class Client:
         }
         _copy(_check_request(requests.get(f'{BASE_API}/content/v1/media', params=params, headers=self._headers)))
 
-    def streams(self, channel_id, media_id, type='adaptive_hls', locale='en-US', ):
+    def streams(self, channel_id, media_id, type='adaptive_hls', locale='en-US', format='ass', service='google'):
         params = {
             'channel_id': channel_id,
             'id': media_id,
             'locale': locale,
-            'type': type
+            'type': type,
+            'format': format,
+            'service': service
         }
+
         _copy(_check_request(requests.get(f'{BASE_API}/videos/v1/streams', params=params, headers=self._headers)))
 
     def channels(self):
