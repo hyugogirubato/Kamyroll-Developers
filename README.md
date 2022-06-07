@@ -11,9 +11,9 @@ A python client is available so that you can use the API more easily. You will f
 <details><summary>Authentication</summary>
 
 ````yml
-BASE_URL: 'https://api-kamyroll.herokuapp.com'
-USER_AGENT: Kamyroll/3.17.0 Android/7.1.2 okhttp/4.9.1  
-BASIC_AUTHORIZATION: Basic BCoB9f4m4lSlo+fp05PjlwWcplxQXDT+N+1FfvsyoF41YSy8nH+kuJBQowYrVkiZq6PvTvjFEoQQvzJOt3pJZA==  
+BASE_URL: 'https://kamyroll.herokuapp.com'
+USER_AGENT: Kamyroll/3.18.0 Android/7.1.2 okhttp/4.9.1  
+BASIC_AUTHORIZATION: Basic vrvluizpdr2eby+RjSKM17dOLacExxq1HAERdxQDO6+2pHvFHTKKnByPD7b6kZVe1dJXifb6SG5NWMz49ABgJA==  
 ````
 </details>
 
