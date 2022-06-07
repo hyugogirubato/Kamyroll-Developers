@@ -1,5 +1,5 @@
 ![Kamyroll-Developers](/resource/kamyroll_developers.png?raw=true)  
-[![Version](https://img.shields.io/badge/Version-v3.17.0-green.svg)](https://shields.io/)
+[![Version](https://img.shields.io/badge/Version-v3.18.0-green.svg)](https://shields.io/)
 ## Description
 Server synthesizing requests to compatible sites by providing a response in unified JSON format and offering complete information for each available media.
 
